@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1.0"
+  >
+
+  <title>
+    SafraLink — Meu perfil
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+<body
+  data-private="true"
+>
+
+<div class="app">
+
+  <aside class="sidebar">
+
+    <a
+      class="brand"
+      href="inicio.html"
+    >
+
+      <div class="brand-mark">
+        🌱
+      </div>
+
+      <span>
+        SafraLink
+      </span>
+
+    </a>
+
+
+    <nav class="nav">
+
+      <a href="inicio.html">
+        <span class="nav-icon">⌂</span>
+        <span>Início</span>
+      </a>
+
+      <a href="produtos.html">
+        <span class="nav-icon">🧺</span>
+        <span>Produtos</span>
+      </a>
+
+      <a href="colheitas.html">
+        <span class="nav-icon">🌾</span>
+        <span>Colheitas</span>
+      </a>
+
+      <a
+        href="pedidos.html"
+        data-seller-only
+      >
+        <span class="nav-icon">📋</span>
+        <span>Pedidos</span>
+      </a>
+
+      <a
+        href="transporte.html"
+        data-seller-only
+      >
+        <span class="nav-icon">🚚</span>
+        <span>Transporte</span>
+      </a>
+
+      <a
+        href="sobras.html"
+        data-seller-only
+      >
+        <span class="nav-icon">♻</span>
+        <span>Sobras</span>
+      </a>
+
+
+
+      <a href="chat.html" data-page="chat">
+        <span class="nav-icon chat-nav-icon">💬<span class="chat-notification-dot" aria-label="Nova mensagem" hidden></span></span>
+        <span>Chat</span>
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <button
+        class="btn btn-soft"
+        data-logout
+        style="width:100%"
+      >
+        Sair
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <main class="main">
+
+    <div class="topbar">
+
+      <div class="page-title">
+
+        <h1>
+          Meu perfil
+        </h1>
+
+        <p>
+          Atualize seus dados cadastrais.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <section class="card profile-summary-card" style="margin-bottom:18px">
+      <div class="profile-head profile-head-enhanced">
+        <div class="profile-photo-wrap">
+          <div class="big-avatar profile-photo" data-initials>MA</div>
+          <label class="profile-photo-button" for="profile-photo">Alterar foto</label>
+          <input id="profile-photo" type="file" accept="image/*" hidden>
+        </div>
+        <div>
+          <h2 data-user-name>Maria</h2>
+          <p data-user-role style="color:var(--muted);font-size:13px">Compradora</p>
+          <small style="color:var(--muted)">Atualize sua foto e seus dados sempre que precisar.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="card form-card">
+
+      <form id="profile-form">
+
+        <h2 class="form-section-title">Dados da conta</h2>
+        <div class="form-grid">
+          <div class="field"><label>Nome completo</label><input class="input" id="profile-name" required></div>
+          <div class="field"><label>E-mail</label><input class="input" id="profile-email" type="email" required></div>
+          <div class="field"><label>Nova senha</label><input class="input" id="profile-password" type="password" minlength="6" placeholder="Deixe em branco para manter a atual"></div>
+          <div class="field"><label>Confirmar nova senha</label><input class="input" id="profile-password-confirm" type="password" minlength="6" placeholder="Repita a nova senha"></div>
+        </div>
+
+        <div id="profile-seller-fields" hidden>
+          <h2 class="form-section-title">Dados do vendedor / produtor</h2>
+          <div class="form-grid">
+            <div class="field"><label>Tipo de cadastro</label><select class="select" id="profile-document-type"><option value="">Selecione</option><option value="cpf">Pessoa física — CPF</option><option value="cnpj">Pessoa jurídica — CNPJ</option></select></div>
+            <div class="field"><label>CPF ou CNPJ</label><input class="input" id="profile-document"></div>
+            <div class="field"><label>Data de nascimento / abertura</label><input class="input" id="profile-birth" type="date"></div>
+            <div class="field"><label>Telefone</label><input class="input" id="profile-phone" type="tel"></div>
+            <div class="field"><label>CEP</label><input class="input" id="profile-cep"></div>
+            <div class="field"><label>Município</label><input class="input" id="profile-city"></div>
+            <div class="field full"><label>Endereço</label><input class="input" id="profile-address"></div>
+            <div class="field"><label>Nome do sítio, chácara ou negócio</label><input class="input" id="profile-farm"></div>
+            <div class="field"><label>Tipo de produção</label><select class="select" id="profile-production"><option value="">Selecione</option><option>Hortaliças</option><option>Frutas</option><option>Cereais</option><option>Legumes e raízes</option><option>Produção diversificada</option><option>Outro</option></select></div>
+            <div class="field full"><label>Descrição da atividade</label><textarea class="textarea" id="profile-description" rows="4"></textarea></div>
+            <div class="field full"><label>Foto do documento de identificação</label><input class="input" id="profile-document-photo" type="file" accept="image/*,.pdf"><small style="color:var(--muted)">Você pode substituir o documento cadastrado.</small></div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+
+          <a
+            class="btn btn-soft"
+            href="tornar-vendedor.html"
+            data-buyer-only
+          >
+            Quero ser vendedor
+          </a>
+
+          <button class="btn btn-primary">
+            Salvar alterações
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
